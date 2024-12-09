@@ -1,0 +1,14 @@
+local:
+  service: Disk
+  root: <%= Rails.root.join("storage") %>
+
+test:
+  service: Disk
+  root: <%= Rails.root.join("tmp/storage") %>
+
+amazon: 
+  service: S3 
+  access_key_id: 'AKIAQFLZD6VJ5S7XK46P'
+  secret_access_key: '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'
+  region: "us-east-1" 
+  bucket: 'alt-photo-upload'
